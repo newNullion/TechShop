@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background-color: #ececec;
+}
+
+main {
+    padding-top: 120px;
+}
+
+.container {
+    margin-right: 130px;
+    margin-left: 130px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    background-color: #35239D;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.warning {
+    color: crimson;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.header-block, .header-block__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 100%;
+    padding: 20px 40px;
+    transition: 0.5s;
+}
+
+.header-block__title {
+    padding: 17.5px 40px;
+    position: relative;
+}
+
+.header-block__user {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    color: black;
+    background-color: white;
+    display: none;
+    z-index: 1000;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.dropdown ul {
+    list-style: none;
+}
+
+.dropdown li {
+    border-bottom: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.dropdown li:hover {
+    background-color: #f5f5f5;
+    color: #5746B4;
+}
+
+a {
+    all: unset;
+}
+
+.header-block__title-link {
+    all: unset;
+    display: block;
+    height: 100%;
+}
+
+.header-block__title:hover .dropdown {
+    display: block;
+}
+
+.header-block__user:hover .dropdown-user {
+    display: block;
+}
+
+.header-block:hover, .header-block__title:hover {
+    background-color: #5746B4;
+}
+
+.header-block:hover svg {
+    color: white;
+}
+
+.header-input input {
+    outline: none;
+    border: none;
+    border: 1px solid transparent;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.header-input {
+    width: 28vw;
+    padding: 0 20px;
+}
+
+.nav-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-block__text {
+    font-size: 14px;
+}
+
+.header-block svg, .header-block__title svg {
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+    color: #776DAF;
+    transition: 0.5s;
+}
+
+.header-block__title svg {
+    top: 4px;
+}
+
+
+.header-block__title svg {
+    color: white;
+}
+
+.header-block__title {
+    font-size: 20px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 70vw;
+    margin: 0 auto;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 1s;
+    will-change: transform;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+    flex: 0 0 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 0;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.card {
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    border-top: 1px solid #d6d6d6;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    color: #5746B4;
+}
+
+.card-img img {
+    width: 80%;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+
+.card-title, .card-price {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.carousel {
+    margin-bottom: 60px;
+}
+
+.cards-category {
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.cards-category:hover {
+    color: red;
+}
+
+.dropdown ul li a, .header-block__text {
+    display: block;
+}
+
+.warning-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    background-color: #0071f0;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.warning-btn:hover {
+    background-color: #0053b3;;
+}
+
+.block {
+    padding: 20px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.product {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.product-img {
+    background-color: white;
+    display: inline-block;
+    padding: 30px;
+    width: 30%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-price, .product-desc {
+    font-size: 18px;
+}
+
+.product-desc {
+    line-height: 35px;
+}
+
+.product-price {
+    margin-bottom: 10px;
+}
+
+.form-add-container {
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.form-add-title {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.form-add p {
+    margin-bottom: 15px;
+}
+
+.form-add label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-add input[type='text'],
+.form-add input[type='number'],
+.form-add input[type='file'],
+.form-add select,
+.form-add textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-add textarea {
+    resize: vertical;
+}
+
+.form-add input:focus,
+.form-add select:focus,
+.form-add textarea:focus {
+    outline: none;
+    border: 1px solid #000;
+}
+
+.form-add-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    background-color: #0071f0;
+    transition: 0.3s;
+}
+
+.form-add-btn:hover {
+    background-color: #0053b3;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
